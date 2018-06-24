@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 classifier = SVC()
+classifier2 = DecisionTreeClassifier()
 trainX = pd.read_csv("Training_set.csv")
 train_x = []
 test_x = [60,70,10,25.777,4,6]
@@ -20,5 +21,8 @@ print("train x dimension :",train_x)
 print("train y dimension :",train_y)
 print("test x dimension :",test_x)
 classifier.fit(X=train_x , y = train_y)
+classifier2.fit(X=train_x , y = train_y)
 prediction = classifier.predict((test_x))
-print("prediction from  DecisionTree:",prediction)
+prediction2  = classifier2.predict((test_x))
+print("prediction from  SVC :",prediction)
+print("prediction from decisiontree" : , prediction2)
