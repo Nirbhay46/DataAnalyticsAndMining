@@ -10,7 +10,6 @@ test_x = [60,70,10,25.777,4,6]
 np.array(test_x)
 test_x = np.reshape(test_x, (-1, 6))
 print(test_x)
-classifier = DecisionTreeClassifier()
 train_x = trainX.get_values()
 np.array(train_x)
 trainY= pd.read_csv("train_y(label).csv",index_col=False)
